@@ -1,0 +1,112 @@
+:root {
+	--DarkCyan: hsl(185, 75%, 39%);
+	--VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+	--DarkGrayishBlue: hsl(227, 10%, 46%);
+	--DarkGray: hsl(0, 0%, 59%);
+	--LightDarkGray: hsla(0, 0%, 59%, 0.25);
+
+	--MainFont: 'Kumbh Sans', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--MainFont);
+	font-size: 18px;
+	background-color: var(--DarkCyan);
+	background-image: url(images/bg-pattern-top.svg),
+		url(images/bg-pattern-bottom.svg);
+	background-position: right 46vw bottom 25vh, left 45vw top 39vh;
+	background-repeat: no-repeat, no-repeat;
+}
+
+.card-container {
+	background-color: white;
+	border-radius: 20px;
+	width: 325px;
+	height: 375px;
+	margin: 150px auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.bubbles {
+	background-image: url(images/bg-pattern-card.svg);
+	height: 140px;
+}
+
+.card-photo {
+	position: absolute;
+	top: 87px;
+	left: 35%;
+	width: 100px;
+	height: 100px;
+	border: 5px solid white;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.personal-data-container {
+	text-align: center;
+	margin-top: 75px;
+}
+
+.personal-data-container .name {
+	color: var(--VeryDarkDesaturatedBlue);
+	font-weight: 600;
+}
+
+.personal-data-container .age {
+	color: var(--DarkGrayishBlue);
+	margin-left: 5px;
+}
+
+.personal-data-container .city {
+	margin: 10px 0 25px 0;
+	font-size: 14px;
+	color: var(--DarkGrayishBlue);
+}
+
+.stats-container {
+	border-top: 1px solid var(--LightDarkGray);
+	text-align: center;
+	height: 85px;
+	display: flex;
+	flex-direction: row;
+	column-gap: 40px;
+	justify-content: center;
+	align-items: center;
+}
+
+.stats .quantity {
+	font-weight: 600;
+	color: var(--VeryDarkDesaturatedBlue);
+}
+
+.stats .units {
+	font-size: 10px;
+	color: var(--DarkGrayishBlue);
+	letter-spacing: 2px;
+	margin-top: 3px;
+}
+
+footer .attribution {
+	font-size: 11px;
+	text-align: center;
+}
+footer .attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* ********** >1440 ********** */
+
+@media screen and (min-width: 1441px) {
+	.card-container {
+		width: 350px;
+		height: 375px;
+	}
+}
